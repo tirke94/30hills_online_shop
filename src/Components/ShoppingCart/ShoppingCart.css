@@ -1,0 +1,42 @@
+.shoppingCart {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -400px;
+  width: 400px;
+  background-color: rgb(46, 55, 47);
+  color: white;
+  padding: 1rem 1rem 0 1rem;
+  transition: all 250ms ease-in-out;
+}
+.shoppingCart h1 {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  right: 0;
+}
+.div--btns {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+.shoppingCart--btn {
+  width: 50%;
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+.close--btn {
+  background-color: #e6e6e6;
+}
+.buy--btn {
+  background-color: rgb(255, 175, 26);
+}
