@@ -1,0 +1,29 @@
+.productDetails {
+  width: 600px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+.productDetails div {
+  width: 100%;
+}
+.productDetailsName {
+  font-size: 2rem;
+}
+.productDetailsContent {
+  font-size: 1.5rem;
+}
+.productDetailsImg {
+  width: 80%;
+}
+.detailsSpan {
+  font-weight: 600;
+}
+@media screen and (max-width: 400px) {
+  .productDetails {
+    width: 100%;
+  }
+}

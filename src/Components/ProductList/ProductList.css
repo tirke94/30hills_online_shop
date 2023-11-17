@@ -1,12 +1,24 @@
 .productsSection {
-    width: 1300px;
+  width: 1300px;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+@media screen and (max-width: 1300px) {
+  .productsSection {
+    width: 100%;
     padding: 1rem;
-    margin: auto;
-    margin-top: 8rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    column-gap: 2rem;
-    row-gap: 2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .productsSection {
+    width: 100%;
+    row-gap: 1rem;
+  }
 }

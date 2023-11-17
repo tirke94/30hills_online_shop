@@ -4,12 +4,14 @@ import ShoppingCart from "./Components/ShoppingCart/ShoppingCart"
 import { useState } from "react"
 import data from "./data.json"
 import toast, { Toaster } from "react-hot-toast"
+import Filters from "./Components/Filters/Filter"
+
 // import { getAllProducts } from "./Utils/http"
 
 import "./App.css"
 
 function App() {
-    const [allProducts] = useState(data.products.data.items)
+    const [allProducts, setAllProducts] = useState(data.products.data.items)
     const [showCart, setShowCart] = useState(false)
     const [cartProducts, setCartProducts] = useState([])
     const [totalAmount, setTotalAmount] = useState(0)
@@ -48,10 +50,40 @@ function App() {
         setTotalAmount(total)
     }
 
+    const ascendingFilterHandler = () => {
+        setAllProducts([...allProducts.sort((a, b) => a.price - b.price)])
+        return
+    }
+
+    const descendingFilterHandler = () => {
+        setAllProducts([...allProducts.sort((a, b) => b.price - a.price)])
+        return
+    }
+    const categoryFilterHandler = (event) => {
+        const filteredArray = data.products.data.items.filter(
+            (item) => item.category === event.target.value,
+        )
+        setAllProducts([...filteredArray])
+    }
+
+    const searchFilterHandler = (searchValue) => {
+        if (searchValue === "") {
+            setAllProducts(data.products.data.items)
+            return
+        }
+        setAllProducts(
+            data.products.data.items.filter(
+                (item) =>
+                    item.name.includes(searchValue) ||
+                    item.description.includes(searchValue),
+            ),
+        )
+    }
+
     // const fetchProducts = () => {
     //     getAllProducts()
     //         .then((response) => {
-    //             console.log(response)
+    //             setAllProducts(response.data.products.data.items)
     //         })
     //         .catch((err) => {
     //             console.log(err)
@@ -68,6 +100,13 @@ function App() {
                 onShowCartHandler={showCartHandler}
                 itemsCounter={cartProducts.length}
             />
+            <Filters
+                onAscendingFilterHandler={ascendingFilterHandler}
+                onDescendingFilterHandler={descendingFilterHandler}
+                onCategoryFilterHandler={categoryFilterHandler}
+                onSearchFilterHandler={searchFilterHandler}
+            />
+
             <ProductList
                 products={allProducts}
                 onAddItemToCartHandler={addItemToCartHandler}

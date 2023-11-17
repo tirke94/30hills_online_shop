@@ -1,76 +1,96 @@
 .cartBackground {
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    width: 95vw;
-    height: 100vh;
-    background-color: #3d3d3d88;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 95vw;
+  height: 100vh;
+  background-color: #3d3d3d88;
 }
 
 .shoppingCart {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 400px;
-    background-color: rgb(46, 55, 47);
-    color: white;
-    padding: 1rem 1rem 0 1rem;
-    transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  background-color: rgb(46, 55, 47);
+  color: white;
+  padding: 1rem 1rem 0 1rem;
+  transition: all 0.3s ease;
 }
 .shoppingCart h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 .total-amount-section {
-    width: 90%;
-    font-size: 1.5rem;
-    position: absolute;
-    bottom: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0;
+  width: 90%;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
 }
 .total-amount-section-price {
-    color: #ffaf1a;
+  color: #ffaf1a;
 }
 .div--btns {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
 }
 .shoppingCart--btn {
-    width: 50%;
-    padding: 1.5rem 0;
-    font-size: 1.5rem;
-    text-align: center;
-    border: none;
-    color: black;
-    cursor: pointer;
+  width: 50%;
+  padding: 1.5rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  border: none;
+  color: black;
+  cursor: pointer;
 }
 .close--btn {
-    background-color: #e6e6e6;
-    transition: all 0.3s ease;
+  background-color: #e6e6e6;
+  transition: all 0.3s ease;
 }
 .close--btn:hover {
-    width: 60%;
-    color: #ffaf1a;
+  width: 60%;
+  color: #ffaf1a;
 }
 .buy--btn {
-    background-color: #ffaf1a;
-    transition: all 0.3s ease;
+  background-color: #ffaf1a;
+  transition: all 0.3s ease;
 }
 .buy--btn:hover {
-    width: 60%;
-    color: #e6e6e6;
+  width: 60%;
+  color: #e6e6e6;
 }
 .emptyCart {
-    padding: 3rem 0;
-    color: #ffaf1a;
+  padding: 3rem 0;
+  color: #ffaf1a;
+  font-size: 1.2rem;
+  text-align: center;
+}
+@media screen and (max-width: 400px) {
+  .shoppingCart {
+    width: 100%;
+  }
+  .shoppingCart h1 {
+    font-size: 1.5rem;
+  }
+  .total-amount-section {
+    font-size: 1.3rem;
+  }
+
+  .shoppingCart--btn {
+    width: 50%;
+    padding: 1.3rem 0;
     font-size: 1.2rem;
-    text-align: center;
+  }
+  .emptyCart {
+    font-size: 1rem;
+  }
 }

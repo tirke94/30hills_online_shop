@@ -1,62 +1,94 @@
 .card {
-    width: 280px;
-    height: 470px;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 2rem;
-    background-color: #eeeee4;
-    box-shadow: 1px 1px 40px -25px rgba(0, 0, 0, 0.74) inset;
-    -webkit-box-shadow: 1px 1px 40px -15px rgba(0, 0, 0, 0.74) inset;
-    -moz-box-shadow: 1px 1px 40px -15px rgba(0, 0, 0, 0.74) inset;
-    border: 1px solid #eeeee4;
-    border-radius: 10px;
-    text-align: center;
-    transition: all 0.3s ease;
+  width: 280px;
+  height: 470px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 2rem;
+  background-color: #eeeee4;
+  box-shadow: 1px 1px 40px -25px rgba(0, 0, 0, 0.74) inset;
+  -webkit-box-shadow: 1px 1px 40px -15px rgba(0, 0, 0, 0.74) inset;
+  -moz-box-shadow: 1px 1px 40px -15px rgba(0, 0, 0, 0.74) inset;
+  border: 1px solid #eeeee4;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 .card:hover {
-    border: 1px solid #ffaf1a;
+  border: 1px solid #ffaf1a;
 }
 .productName {
-    color: black;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 .productName:hover {
-    color: #ffaf1a;
+  color: #ffaf1a;
 }
 .productPrice {
-    color: black;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 1.2rem;
-    font-weight: 300;
-    letter-spacing: 2px;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 .priceSection {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 }
 .addToCart {
-    padding: 0.5rem 1rem;
-    background-color: black;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-size: 1.5rem;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
 }
 .productImg {
-    width: 90%;
+  width: 90%;
 }
 .anchor {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1300px) {
+  .card {
+    width: 260px;
+    height: 450px;
+    row-gap: 1.5rem;
+  }
+  .productName {
+    font-size: 1.4rem;
+  }
+  .addToCart {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .card {
+    width: 230px;
+    height: 380px;
+    padding: 2rem 1rem;
+    row-gap: 1rem;
+  }
+  .productName {
+    font-size: 1.3rem;
+  }
+  .productPrice {
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+  .addToCart {
+    font-size: 1.3rem;
+  }
 }
